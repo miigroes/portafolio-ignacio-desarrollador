@@ -1,0 +1,193 @@
+/* Variables de colores para mantener la coherencia */
+:root {
+    --bg-color: #050505; /* Fondo casi negro */
+    --text-color: #ffffff;
+    --accent-color: #f83f8b; /* ROSA VIBRANTE */
+    --glass-bg: rgba(255, 255, 255, 0.05); /* Blanco muy transparente */
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+/* Estilos para el contenedor 3D */
+#canvas-container {
+    position: fixed; /* Se queda fijo al fondo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Se coloca detrás de todo el contenido */
+    pointer-events: none; /* Permite hacer clic a través del canvas */
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* El efecto de "Panel de Vidrio" (Glassmorphism) */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px); /* Aquí está la magia del desenfoque */
+    -webkit-backdrop-filter: blur(15px); /* Para soporte en Safari */
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Tipografía y elementos */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.highlight {
+    color: var(--accent-color);
+}
+
+p {
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+/* Botones */
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px -10px var(--accent-color);
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+/* Grid de servicios */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-item h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Versión móvil simple */
+@media (max-width: 768px) {
+    h1 { font-size: 2.2rem; }
+    .glass-panel { padding: 2rem; }
+}
+
+/* --- ESTILOS PARA EL FORMULARIO DE CONTACTO --- */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los elementos */
+    padding-top: 20px;
+}
+
+.contact-form label {
+    font-weight: 500;
+    color: var(--accent-color); /* Usamos el color de acento para las etiquetas */
+    margin-bottom: -10px; /* Acercamos el label al input */
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    background-color: var(--glass-bg); /* Fondo transparente para que se vea el 3D */
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 12px;
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    outline: none;
+    border-color: var(--accent-color); /* Borde de acento al hacer clic */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Permite al usuario ajustar la altura del área de texto */
+}
+
+/* El botón de enviar usa la clase que ya teníamos, solo aseguramos que ocupe todo el ancho */
+.contact-form button.cta-button {
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+/* --- CORRECCIÓN DE COLOR PARA LISTA DESPLEGABLE (SELECT BOX) --- */
+
+.contact-form select {
+    /* Mantiene el estilo de la caja principal del select */
+    background-color: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    
+    /* 1. Forzamos el color de texto a blanco */
+    color: var(--text-color);
+}
+
+.contact-form select option {
+    /* 2. Forzamos el fondo de las opciones a tu color de fondo principal. */
+    /* Esto asegura que el texto blanco (var(--text-color)) sea legible sobre un fondo oscuro. */
+    background-color: var(--bg-color); 
+    color: var(--text-color);
+    padding: 10px; /* Un poco de espacio extra */
+}

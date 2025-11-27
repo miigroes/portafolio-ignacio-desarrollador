@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignacio Rojas E. | Desarrollo Web Santiago</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="canvas-container"></div>
+
+    <main>
+        <section class="glass-panel hero">
+            <h1>Hola, soy <span class="highlight">Ignacio Rojas E.</span></h1>
+            <h2>Desarrollador Web en Santiago</h2>
+            <p>Transformo ideas locales en experiencias digitales globales. Especializado en sitios modernos y funcionales para pymes y profesionales.</p>
+            <a href="#contacto" class="cta-button">¡Quiero mi cotización en 24 horas!</a>
+        </section>
+
+        <section class="glass-panel services">
+            <h3>Mis Servicios</h3>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h4>🌐 Presencia Digital 24/7</h4>
+                    <p>Diseño y desarrollo de sitios que generan confianza y captan clientes potenciales mientras duermes.</p>
+                </div>
+                <div class="service-item">
+                    <h4>🚀 Landing Pages</h4>
+                    <p>Páginas diseñadas específicamente para vender o captar clientes.</p>
+                </div>
+                <div class="service-item">
+                    <h4>📱 Diseño Responsivo</h4>
+                    <p>Tu sitio se verá perfecto en celulares, tablets y computadores.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-panel contact" id="contacto">
+            <h3>¿Listo para digitalizar tu idea?</h3>
+            <p>Hablemos sobre cómo puedo ayudar a tu negocio en Santiago. ¡Te responderé en menos de 24 horas!</p>
+            
+            <form name="contacto" method="POST" netlify action="/gracias.html" class="contact-form">
+                
+                <label for="nombre">Nombre del Cliente / Negocio</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email de Contacto</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="servicio">Servicio de Interés</label>
+                <select id="servicio" name="servicio" required>
+                    <option value="" disabled selected>-- Selecciona un Servicio --</option>
+                    <option value="Landing Page/Cotización">Landing Page para mi negocio</option>
+                    <option value="Sitio Corporativo">Sitio Corporativo Completo</option>
+                    <option value="Otro">Otro (Especifique en el mensaje)</option>
+                </select>
+
+                <label for="mensaje">Mensaje (Cuéntame sobre tu negocio)</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <button type="submit" class="cta-button">Enviar Solicitud</button>
+            </form>
+            </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
