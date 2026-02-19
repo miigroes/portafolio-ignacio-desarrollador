@@ -3,69 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ignacio Rojas E. | Desarrollo Web Santiago!</title>
+    <title>Ignacio Rojas | Web Developer para captar más clientes</title>
+    <meta name="description" content="Desarrollo web orientado a conversión para Chile y mercado global: landing pages, sitios corporativos, e-commerce y optimización para vender más.">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta property="og:title" content="Ignacio Rojas | Web Developer para captar más clientes">
+    <meta property="og:description" content="Creo sitios web que convierten visitas en reuniones y ventas.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CL">
+    <meta name="theme-color" content="#0b1020">
+    <link rel="canonical" href="https://ignacio-rojas.dev/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Ignacio Rojas Web Development",
+      "description": "Desarrollo web orientado a conversión para negocios en Chile y mercado global.",
+      "areaServed": ["Chile", "Worldwide"],
+      "url": "https://ignacio-rojas.dev/",
+      "sameAs": ["https://calendly.com/m-ignacio-r-e/consulta-web-gratuita-30-minutos"],
+      "offers": {
+        "@type": "OfferCatalog",
+        "name": "Planes web",
+        "itemListElement": [
+          {"@type": "Offer", "name": "Plan Start"},
+          {"@type": "Offer", "name": "Plan Growth"},
+          {"@type": "Offer", "name": "Plan Scale"},
+          {"@type": "Offer", "name": "Plan E-commerce"}
+        ]
+      }
+    }
+    </script>
 </head>
 <body>
-    <div id="canvas-container"></div>
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+    <div id="canvas-container" aria-hidden="true"></div>
 
-    <main>
+    <header class="site-header glass-panel">
+        <p class="brand">Ignacio Rojas · Web Developer</p>
+        <nav aria-label="Navegación principal">
+            <a href="#servicios">Servicios</a>
+            <a href="#planes">Planes</a>
+            <a href="#resultados">Resultados</a>
+            <a href="casos.html">Casos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="social-actions" aria-label="Canales directos">
+            <a id="waLinkTop" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a id="igLinkTop" href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+    </header>
+
+    <main id="main-content">
         <section class="glass-panel hero">
-            <h1>Hola, soy <span class="highlight">Ignacio Rojas E.</span></h1>
-            <h2>Desarrollador Web en Santiago</h2>
-            <p>Transformo ideas locales en experiencias digitales globales. Especializado en sitios modernos y funcionales para pymes y profesionales.</p>
-            <a href="#contacto" class="cta-button">¡Quiero mi cotización en 24 horas!</a>
+            <p class="eyebrow">Sitios web para vender más · Chile + Global</p>
+            <h1>Creo páginas web que <span class="highlight">generan clientes</span></h1>
+            <h2>Desarrollo, estrategia y optimización de conversión para negocios que quieren crecer</h2>
+            <p>Ingeniería en Informática (DUOC UC, 4° año). Mi enfoque es simple: construir rápido, medir conversiones y escalar lo que funciona para aumentar reuniones y ventas.</p>
+            <div class="hero-actions">
+                <a href="#contacto" class="cta-button">Solicitar propuesta ahora</a>
+                <a href="casos.html" class="ghost-button">Ver casos de negocio</a>
+            </div>
+            <p class="micro-proof">✅ Respuesta en menos de 24 horas · ✅ Enfoque en ROI · ✅ Mobile-first · ✅ E-commerce listo para vender</p>
         </section>
 
-        <section class="glass-panel services">
-            <h3>Mis Servicios</h3>
+        <section class="glass-panel kpi-strip" id="resultados" aria-label="Resultados esperados">
+            <article>
+                <h3>+20%</h3>
+                <p>Mejora objetivo en conversión inicial</p>
+            </article>
+            <article>
+                <h3>5-10 días</h3>
+                <p>Tiempo de salida para landing MVP</p>
+            </article>
+            <article>
+                <h3>1 objetivo</h3>
+                <p>Un CTA claro para vender más rápido</p>
+            </article>
+        </section>
+
+        <section class="glass-panel services" id="servicios" aria-labelledby="servicios-title">
+            <h3 id="servicios-title">Servicios</h3>
             <div class="services-grid">
-                <div class="service-item">
-                    <h4>🌐 Presencia Digital 24/7</h4>
-                    <p>Diseño y desarrollo de sitios que generan confianza y captan clientes potenciales mientras duermes.</p>
-                </div>
-                <div class="service-item">
-                    <h4>🚀 Landing Pages</h4>
-                    <p>Páginas diseñadas específicamente para vender o captar clientes.</p>
-                </div>
-                <div class="service-item">
-                    <h4>📱 Diseño Responsivo</h4>
-                    <p>Tu sitio se verá perfecto en celulares, tablets y computadores.</p>
-                </div>
+                <article class="service-item">
+                    <h4>🚀 Landing Pages de Conversión</h4>
+                    <p>Páginas diseñadas para convertir tráfico en leads calificados.</p>
+                </article>
+                <article class="service-item">
+                    <h4>🏢 Sitio Corporativo</h4>
+                    <p>Arquitectura profesional para posicionarte mejor y cerrar más negocios.</p>
+                </article>
+                <article class="service-item">
+                    <h4>🛒 E-commerce</h4>
+                    <p>Tiendas online optimizadas para vender productos, automatizar pedidos y escalar ingresos.</p>
+                </article>
+                <article class="service-item">
+                    <h4>🌍 Expansión Internacional</h4>
+                    <p>Preparación técnica y UX para vender en mercados fuera de Chile.</p>
+                </article>
             </div>
         </section>
 
-        <section class="glass-panel contact" id="contacto">
-            <h3>¿Listo para digitalizar tu idea?</h3>
-            <p>Hablemos sobre cómo puedo ayudar a tu negocio en Santiago. ¡Te responderé en menos de 24 horas!</p>
-            
-            <form name="contactoV2" method="POST" netlify action="gracias.html" class="contact-form">
+        <section class="glass-panel" id="ejemplos" aria-labelledby="ejemplos-title">
+            <h3 id="ejemplos-title">Ejemplos referenciales por nicho</h3>
+            <p>Así podría verse tu servicio implementado en distintos rubros. Son referencias para visualizar resultados comerciales.</p>
+            <div class="examples-grid">
+                <article class="example-card">
+                    <img src="assets/referencias/landing-clinica.svg" alt="Referencia landing para clínica dental">
+                    <h4>Landing: Clínica Dental</h4>
+                    <p>Objetivo: agendar evaluaciones desde Google/Instagram.</p>
+                </article>
+                <article class="example-card">
+                    <img src="assets/referencias/corporativo-consultora.svg" alt="Referencia sitio corporativo para corredora de propiedades">
+                    <h4>Corporativo: Corredora de Propiedades</h4>
+                    <p>Objetivo: captar propietarios y compradores de forma consistente.</p>
+                </article>
+                <article class="example-card">
+                    <img src="assets/referencias/ecommerce-fitness.svg" alt="Referencia e-commerce para suplementos fitness">
+                    <h4>E-commerce: Suplementos Fitness</h4>
+                    <p>Objetivo: vender catálogo online con checkout optimizado.</p>
+                </article>
+                <article class="example-card">
+                    <img src="assets/referencias/global-servicios.svg" alt="Referencia web global para servicios remotos">
+                    <h4>Global: Servicios Remotos</h4>
+                    <p>Objetivo: vender servicios en Chile y mercado internacional.</p>
+                </article>
+            </div>
+        </section>
 
+        <section class="glass-panel" id="planes" aria-labelledby="planes-title">
+            <h3 id="planes-title">Planes de implementación</h3>
+            <div class="services-grid">
+                <article class="service-item pricing-card">
+                    <h4>Plan Start</h4>
+                    <p>Landing + formulario + página de gracias + versión móvil optimizada.</p>
+                    <p class="price-tag">$150.000 CLP</p>
+                    <a class="cta-button pay-button" data-plan="start" href="#" target="_blank" rel="noopener noreferrer">Pagar reserva</a>
+                </article>
+                <article class="service-item featured-card pricing-card">
+                    <h4>Plan Growth (Recomendado)</h4>
+                    <p>Start + página de casos + mejoras SEO base + optimización CRO inicial.</p>
+                    <p class="price-tag">$350.000 CLP</p>
+                    <a class="cta-button pay-button" data-plan="growth" href="#" target="_blank" rel="noopener noreferrer">Pagar reserva</a>
+                </article>
+                <article class="service-item pricing-card">
+                    <h4>Plan Scale</h4>
+                    <p>Growth + roadmap mensual de mejoras para aumentar ingresos web.</p>
+                    <p class="price-tag">$700.000 CLP</p>
+                    <a class="cta-button pay-button" data-plan="scale" href="#" target="_blank" rel="noopener noreferrer">Pagar reserva</a>
+                </article>
+                <article class="service-item pricing-card">
+                    <h4>Plan E-commerce</h4>
+                    <p>Tienda online con catálogo, checkout, medios de pago y base para campañas de ventas.</p>
+                    <p class="price-tag">$1.200.000 CLP</p>
+                    <a class="cta-button pay-button" data-plan="ecommerce" href="#" target="_blank" rel="noopener noreferrer">Pagar reserva</a>
+                </article>
+            </div>
+            <a href="#contacto" class="cta-button section-cta">Quiero el plan recomendado</a>
+            <p class="pricing-note">Precios estándar para implementación base. Si tu proyecto requiere funcionalidades avanzadas, se cotiza en plan personalizado. Puedes reservar tu cupo con pago online o escribir por WhatsApp.</p>
+        </section>
+
+        <section class="glass-panel" aria-labelledby="proceso-title">
+            <h3 id="proceso-title">Cómo trabajamos</h3>
+            <ol class="process-list">
+                <li><strong>Diagnóstico:</strong> objetivo comercial, cliente ideal y propuesta de valor.</li>
+                <li><strong>Construcción:</strong> diseño + desarrollo enfocados en conversión.</li>
+                <li><strong>Lanzamiento:</strong> revisión final, métricas base y roadmap de optimización.</li>
+            </ol>
+        </section>
+
+        <section class="glass-panel" aria-labelledby="testimonios-title">
+            <h3 id="testimonios-title">Prueba social (formato de referencia)</h3>
+            <div class="services-grid">
+                <blockquote class="service-item testimonial">
+                    <p>“Pasamos de no tener leads a recibir contactos semanales desde la web.”</p>
+                    <cite>— Negocio local, servicios profesionales</cite>
+                </blockquote>
+                <blockquote class="service-item testimonial">
+                    <p>“La nueva landing nos ayudó a cerrar reuniones con mejor perfil de cliente.”</p>
+                    <cite>— Emprendimiento B2B</cite>
+                </blockquote>
+                <blockquote class="service-item testimonial">
+                    <p>“Ahora nuestra web sí refleja una marca seria y lista para crecer.”</p>
+                    <cite>— Marca personal</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <section class="glass-panel" aria-labelledby="canales-title">
+            <h3 id="canales-title">Canales directos para cerrar más rápido</h3>
+            <p>Si prefieres contacto inmediato, puedes escribir por WhatsApp o revisar Instagram para ver contenido y casos.</p>
+            <div class="hero-actions">
+                <a id="waLinkMain" href="#" class="cta-button" target="_blank" rel="noopener noreferrer">Escribirme por WhatsApp</a>
+                <a id="igLinkMain" href="#" class="ghost-button" target="_blank" rel="noopener noreferrer">Ver Instagram</a>
+            </div>
+        </section>
+
+        <section class="glass-panel" aria-labelledby="faq-title">
+            <h3 id="faq-title">Preguntas frecuentes</h3>
+            <div class="faq-list">
+                <details>
+                    <summary>¿Cuánto tarda un proyecto inicial?</summary>
+                    <p>Entre 5 y 10 días para un MVP de landing enfocado en conversión.</p>
+                </details>
+                <details>
+                    <summary>¿Trabajas solo en Chile?</summary>
+                    <p>No. También trabajo con clientes que venden en otros países por internet.</p>
+                </details>
+                <details>
+                    <summary>¿Cómo se mide el resultado?</summary>
+                    <p>Con métricas simples: visitas, leads, reuniones y cierres.</p>
+                </details>
+            </div>
+        </section>
+
+        <section class="glass-panel contact" id="contacto" aria-labelledby="contacto-title">
+            <h3 id="contacto-title">Solicita tu propuesta personalizada</h3>
+            <p>Te enviaré una propuesta enfocada en resultados comerciales, no solo en diseño.</p>
+
+            <p id="flow-warning" class="flow-warning" role="status" aria-live="polite" hidden>⚠️ Debes enviar el formulario para ver la página de confirmación.</p>
+
+            <form id="contactoForm" name="contactoV2" method="POST" netlify netlify-honeypot="empresa" action="gracias.html" class="contact-form" novalidate>
                 <input type="hidden" name="form-name" value="contactoV2">
-                <label for="nombre">Nombre del Cliente / Negocio</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <input type="hidden" name="flow-token" id="flowToken" value="">
+                <input type="hidden" name="utm_source" id="utm_source" value="">
+                <input type="hidden" name="utm_medium" id="utm_medium" value="">
+                <input type="hidden" name="utm_campaign" id="utm_campaign" value="">
 
-                <label for="email">Email de Contacto</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="servicio">Servicio de Interés</label>
-                <select id="servicio" name="servicio" required>
-                    <option value="" disabled selected>-- Selecciona un Servicio --</option>
-                    <option value="Landing Page/Cotización">Landing Page para mi negocio</option>
-                    <option value="Sitio Corporativo">Sitio Corporativo Completo</option>
-                    <option value="Otro">Otro (Especifique en el mensaje)</option>
+                <p class="honeypot-field" aria-hidden="true">
+                    <label for="empresa">No completar este campo</label>
+                    <input type="text" id="empresa" name="empresa" tabindex="-1" autocomplete="off">
+                </p>
+
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" minlength="2" maxlength="80" autocomplete="name organization" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required>
+
+                <label for="pais">País objetivo</label>
+                <input type="text" id="pais" name="pais" minlength="2" maxlength="40" placeholder="Chile, México, USA..." required>
+
+                <label for="presupuesto">Presupuesto estimado (CLP)</label>
+                <select id="presupuesto" name="presupuesto" required>
+                    <option value="" disabled selected>-- Selecciona un rango --</option>
+                    <option value="100000-180000">$100.000 - $180.000 CLP (Landing básica)</option>
+                    <option value="180000-350000">$180.000 - $350.000 CLP (Landing pro / web simple)</option>
+                    <option value="350000-700000">$350.000 - $700.000 CLP (Sitio corporativo)</option>
+                    <option value="700000-1500000">$700.000 - $1.500.000 CLP (E-commerce inicial)</option>
+                    <option value=">1500000">Más de $1.500.000 CLP (Proyecto a medida)</option>
                 </select>
 
-                <label for="mensaje">Mensaje (Cuéntame sobre tu negocio)</label>
-                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                <label for="servicio">Servicio</label>
+                <select id="servicio" name="servicio" required>
+                    <option value="" disabled selected>-- Selecciona un Servicio --</option>
+                    <option value="Landing Page/Cotización">Landing de conversión</option>
+                    <option value="Sitio Corporativo">Sitio corporativo</option>
+                    <option value="Estrategia Global">Estrategia web para mercado global</option>
+                    <option value="E-commerce">Tienda online / e-commerce</option>
+                </select>
 
-                <button type="submit" class="cta-button">Enviar Solicitud</button>
+                <label for="mensaje">Objetivo principal</label>
+                <textarea id="mensaje" name="mensaje" rows="5" minlength="20" maxlength="1200" required></textarea>
+
+                <button type="submit" class="cta-button" id="submitBtn">Enviar solicitud</button>
             </form>
-            </section>
+        </section>
     </main>
 
+    <a href="#contacto" class="floating-cta" aria-label="Ir al formulario de contacto">Cotizar ahora</a>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

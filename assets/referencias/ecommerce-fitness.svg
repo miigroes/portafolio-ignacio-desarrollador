@@ -1,0 +1,8 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='700' viewBox='0 0 1200 700'>
+<rect width='1200' height='700' fill='#0b1020'/><rect x='60' y='60' width='1080' height='580' rx='22' fill='#121d3a' stroke='#58b9ff'/>
+<rect x='100' y='110' width='1000' height='56' rx='10' fill='#1c2c56'/><rect x='110' y='210' width='240' height='360' rx='12' fill='#18284f'/>
+<rect x='370' y='210' width='240' height='360' rx='12' fill='#18284f'/><rect x='630' y='210' width='240' height='360' rx='12' fill='#18284f'/>
+<rect x='890' y='210' width='210' height='360' rx='12' fill='#0f1834' stroke='#39d98a'/><rect x='920' y='470' width='150' height='54' rx='10' fill='#39d98a'/>
+<text x='110' y='100' fill='#d8ebff' font-family='Inter,Arial' font-size='28'>E-commerce Suplementos</text>
+<text x='938' y='505' fill='#0d1b34' font-family='Inter,Arial' font-size='20'>Pagar</text>
+</svg>

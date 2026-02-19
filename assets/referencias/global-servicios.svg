@@ -1,0 +1,7 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='700' viewBox='0 0 1200 700'>
+<rect width='1200' height='700' fill='#0a1124'/><rect x='70' y='70' width='1060' height='560' rx='24' fill='#101b39' stroke='#56b2ff'/>
+<circle cx='860' cy='320' r='180' fill='#162a55'/><path d='M700 320h320M860 160v320M740 230c50 30 190 30 240 0M740 410c50-30 190-30 240 0' stroke='#79c8ff' stroke-width='6' fill='none'/>
+<rect x='120' y='150' width='420' height='48' rx='8' fill='#4bb5ff'/><rect x='120' y='220' width='340' height='22' rx='6' fill='#97bee8'/>
+<rect x='120' y='255' width='300' height='22' rx='6' fill='#7ea6d1'/><rect x='120' y='320' width='230' height='52' rx='10' fill='#39d98a'/>
+<text x='120' y='130' fill='#d8ebff' font-family='Inter,Arial' font-size='28'>Servicios Globales B2B</text>
+</svg>
