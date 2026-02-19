@@ -1,193 +1,279 @@
-/* Variables de colores para mantener la coherencia */
 :root {
-    --bg-color: #050505; /* Fondo casi negro */
-    --text-color: #ffffff;
-    --accent-color: #f83f8b; /* ROSA VIBRANTE */
-    --glass-bg: rgba(255, 255, 255, 0.05); /* Blanco muy transparente */
-    --glass-border: rgba(255, 255, 255, 0.1);
+    --bg-color: #060b19;
+    --bg-secondary: #0b1020;
+    --text-color: #e8eefc;
+    --accent-color: #46b3ff;
+    --accent-strong: #1d87d4;
+    --glass-bg: rgba(10, 18, 36, 0.64);
+    --glass-border: rgba(122, 159, 255, 0.24);
+    --warning-bg: rgba(255, 108, 108, 0.12);
 }
 
-/* Reseteo básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { min-height: 100%; }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at 10% 10%, #0f1d3f, var(--bg-color));
     color: var(--text-color);
-    overflow-x: hidden; /* Evita scroll horizontal */
+    overflow-x: hidden;
 }
 
-/* Estilos para el contenedor 3D */
-#canvas-container {
-    position: fixed; /* Se queda fijo al fondo */
+.skip-link {
+    position: absolute;
+    left: -9999px;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Se coloca detrás de todo el contenido */
-    pointer-events: none; /* Permite hacer clic a través del canvas */
+    background: #fff;
+    color: #000;
+    padding: 0.6rem;
+    z-index: 1000;
+}
+.skip-link:focus { left: 1rem; top: 1rem; }
+
+#canvas-container {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
 }
 
 main {
     position: relative;
     z-index: 1;
-    max-width: 900px;
+    width: min(100%, 1040px);
     margin: 0 auto;
-    padding: 2rem;
+    padding: clamp(1rem, 3vw, 2rem);
 }
 
-/* El efecto de "Panel de Vidrio" (Glassmorphism) */
-.glass-panel {
-    background: var(--glass-bg);
-    backdrop-filter: blur(15px); /* Aquí está la magia del desenfoque */
-    -webkit-backdrop-filter: blur(15px); /* Para soporte en Safari */
-    border: 1px solid var(--glass-border);
-    border-radius: 20px;
-    padding: 3rem;
-    margin-bottom: 3rem;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+.site-header {
+    width: min(100%, 1040px);
+    margin: 1rem auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
 }
 
-/* Tipografía y elementos */
-h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+.site-header nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+.site-header nav a { color: var(--text-color); text-decoration: none; font-weight: 600; }
+.site-header nav a[aria-current="page"] { color: var(--accent-color); }
+.brand { font-weight: 800; color: var(--text-color); }
+
+.social-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
-h2 {
-    font-size: 1.8rem;
-    color: var(--accent-color);
-    margin-bottom: 1.5rem;
-    font-weight: 300;
-}
-
-h3 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.highlight {
-    color: var(--accent-color);
-}
-
-p {
-    line-height: 1.6;
-    color: #ccc;
-    margin-bottom: 2rem;
-}
-
-/* Botones */
-.cta-button {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: var(--accent-color);
-    color: var(--bg-color);
+.social-actions a {
+    color: var(--text-color);
     text-decoration: none;
-    font-weight: 700;
-    border-radius: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--glass-border);
+    border-radius: 999px;
+    padding: 0.35rem 0.7rem;
+    font-size: 0.85rem;
 }
 
-.cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px -10px var(--accent-color);
-}
-
-.cta-button.secondary {
-    background-color: transparent;
-    border: 2px solid var(--accent-color);
-    color: var(--accent-color);
-}
-
-/* Grid de servicios */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.service-item h4 {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-}
-
-/* Versión móvil simple */
-@media (max-width: 768px) {
-    h1 { font-size: 2.2rem; }
-    .glass-panel { padding: 2rem; }
-}
-
-/* --- ESTILOS PARA EL FORMULARIO DE CONTACTO --- */
-
-.contact-form {
+.pricing-card {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Espacio entre los elementos */
-    padding-top: 20px;
+    gap: 0.5rem;
 }
 
-.contact-form label {
-    font-weight: 500;
-    color: var(--accent-color); /* Usamos el color de acento para las etiquetas */
-    margin-bottom: -10px; /* Acercamos el label al input */
+.price-tag {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #9fd5ff;
 }
 
+.pricing-note {
+    margin-top: 0.7rem;
+    color: #9db1d8;
+    font-size: 0.95rem;
+}
+
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+    border: 1px solid var(--glass-border);
+    border-radius: 18px;
+    padding: clamp(1.25rem, 3vw, 2.4rem);
+    margin-bottom: 1rem;
+    box-shadow: 0 10px 40px rgba(2, 8, 28, 0.4);
+}
+
+.eyebrow { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem; margin-bottom: 0.8rem; color: #9fb1d8; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 0.5rem; line-height: 1.15; }
+h2 { font-size: clamp(1.1rem, 3vw, 1.7rem); color: var(--accent-color); margin-bottom: 1rem; font-weight: 600; }
+h3 { font-size: clamp(1.2rem, 3.8vw, 1.9rem); margin-bottom: 0.8rem; line-height: 1.3; }
+p { line-height: 1.65; color: #c7d4ef; margin-bottom: 1rem; }
+.highlight { color: var(--accent-color); }
+
+.micro-proof {
+    margin-top: 0.8rem;
+    font-size: 0.92rem;
+    color: #9cc7f2;
+}
+
+.hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+.cta-button,
+.ghost-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 26px;
+    min-height: 48px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-button { background-color: var(--accent-color); color: #061122; }
+.cta-button:hover, .cta-button:focus-visible { background-color: #66c1ff; transform: translateY(-1px); }
+.ghost-button { background: transparent; color: var(--text-color); border-color: var(--glass-border); }
+.ghost-button:hover, .ghost-button:focus-visible { background: rgba(70, 179, 255, 0.1); transform: translateY(-1px); }
+
+.section-cta { margin-top: 1rem; }
+
+.cta-button:focus-visible,
+.ghost-button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+a:focus-visible,
+summary:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.kpi-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 0.8rem;
+}
+
+.kpi-strip article {
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    padding: 1rem;
+    background: rgba(5, 15, 35, 0.5);
+}
+
+.kpi-strip h3 { color: #8fd2ff; margin-bottom: 0.3rem; }
+.kpi-strip p { margin: 0; font-size: 0.95rem; }
+
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 0.8rem; }
+
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+    gap: 0.8rem;
+}
+
+.example-card {
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    padding: 0.75rem;
+    background: rgba(5, 15, 35, 0.5);
+}
+
+.example-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid rgba(122, 159, 255, 0.35);
+    margin-bottom: 0.7rem;
+}
+
+.example-card h4 {
+    margin-bottom: 0.4rem;
+}
+.service-item {
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    padding: 1rem;
+    background: rgba(5, 15, 35, 0.5);
+}
+.featured-card { border-color: var(--accent-color); box-shadow: 0 0 0 1px rgba(70, 179, 255, 0.3) inset; }
+.service-item h4 { margin-bottom: 0.6rem; font-size: 1.05rem; }
+
+.process-list {
+    padding-left: 1.2rem;
+    display: grid;
+    gap: 0.55rem;
+    color: #d8e4fa;
+}
+
+.testimonial p { font-style: italic; margin-bottom: 0.5rem; }
+.testimonial cite { color: #97b4e0; font-size: 0.9rem; }
+
+.faq-list { display: grid; gap: 0.6rem; }
+.faq-list details {
+    border: 1px solid var(--glass-border);
+    background: rgba(7, 16, 37, 0.55);
+    border-radius: 12px;
+    padding: 0.75rem 0.9rem;
+}
+.faq-list summary { cursor: pointer; font-weight: 700; color: #e3ebff; }
+
+.check-list { padding-left: 1.2rem; display: grid; gap: 0.4rem; margin-bottom: 1rem; }
+.check-list li { color: #d1dbf1; }
+
+.contact-form { display: flex; flex-direction: column; gap: 0.8rem; padding-top: 0.4rem; }
+.contact-form label { font-weight: 600; color: #a8beea; }
 .contact-form input,
 .contact-form textarea,
 .contact-form select {
-    background-color: var(--glass-bg); /* Fondo transparente para que se vea el 3D */
+    background-color: rgba(8, 17, 39, 0.8);
     border: 1px solid var(--glass-border);
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 12px;
     color: var(--text-color);
     font-family: inherit;
     font-size: 1rem;
-    transition: border-color 0.3s ease;
+}
+.contact-form select option { background-color: var(--bg-secondary); color: var(--text-color); }
+.contact-form textarea { resize: vertical; }
+.contact-form button.cta-button { margin-top: 0.3rem; width: 100%; }
+
+.flow-warning {
+    background: var(--warning-bg);
+    border: 1px solid #ff6f6f;
+    color: #ffd2d2;
+    border-radius: 10px;
+    padding: 0.8rem;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus,
-.contact-form select:focus {
-    outline: none;
-    border-color: var(--accent-color); /* Borde de acento al hacer clic */
+.honeypot-field { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; overflow: hidden; }
+
+.thanks-main { display: grid; align-items: center; min-height: 85vh; }
+.thanks-card { max-width: 680px; margin-inline: auto; text-align: center; }
+.small-note { font-size: 0.9rem; }
+.back-home { color: var(--accent-color); text-decoration: none; font-weight: 600; }
+
+.floating-cta {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 12;
+    background: var(--accent-color);
+    color: #041022;
+    padding: 0.8rem 1rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
-.contact-form textarea {
-    resize: vertical; /* Permite al usuario ajustar la altura del área de texto */
-}
-
-/* El botón de enviar usa la clase que ya teníamos, solo aseguramos que ocupe todo el ancho */
-.contact-form button.cta-button {
-    margin-top: 15px;
-    width: 100%;
-    text-align: center;
-}
-
-/* --- CORRECCIÓN DE COLOR PARA LISTA DESPLEGABLE (SELECT BOX) --- */
-
-.contact-form select {
-    /* Mantiene el estilo de la caja principal del select */
-    background-color: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 8px;
-    padding: 12px;
-    font-family: inherit;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-    
-    /* 1. Forzamos el color de texto a blanco */
-    color: var(--text-color);
-}
-
-.contact-form select option {
-    /* 2. Forzamos el fondo de las opciones a tu color de fondo principal. */
-    /* Esto asegura que el texto blanco (var(--text-color)) sea legible sobre un fondo oscuro. */
-    background-color: var(--bg-color); 
-    color: var(--text-color);
-    padding: 10px; /* Un poco de espacio extra */
+@media (max-width: 768px) {
+    .site-header { flex-direction: column; align-items: flex-start; }
+    .social-actions { width: 100%; }
+    .cta-button, .ghost-button { width: 100%; }
+    .floating-cta { left: 12px; right: 12px; text-align: center; }
 }

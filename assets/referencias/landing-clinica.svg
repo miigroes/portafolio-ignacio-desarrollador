@@ -1,0 +1,8 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='700' viewBox='0 0 1200 700'>
+<rect width='1200' height='700' fill='#0b1228'/><rect x='60' y='60' width='1080' height='580' rx='24' fill='#111b3a' stroke='#46b3ff' opacity='0.9'/>
+<rect x='100' y='120' width='460' height='44' rx='8' fill='#46b3ff'/><rect x='100' y='190' width='360' height='20' rx='6' fill='#9cc7f2'/>
+<rect x='100' y='230' width='320' height='20' rx='6' fill='#7da3d1'/><rect x='100' y='290' width='220' height='50' rx='10' fill='#3ad18b'/>
+<rect x='640' y='120' width='460' height='480' rx='18' fill='#0f1730' stroke='#68d3ff'/><circle cx='870' cy='250' r='110' fill='#1a284f'/>
+<text x='100' y='105' fill='#cce6ff' font-family='Inter,Arial' font-size='28'>Landing Clínica Dental</text>
+<text x='690' y='500' fill='#9cc7f2' font-family='Inter,Arial' font-size='24'>Agenda tu evaluación</text>
+</svg>
